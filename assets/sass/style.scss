@@ -6,6 +6,7 @@ html,
 body {
     margin: 0;
     height: 100%;
+    background-color: #EFEEE6;
 }
 img {
     display: block;
@@ -279,12 +280,12 @@ $panelcount: 9; // set # of panels/sections here
         // aesthetic only ----
         position: relative;
 
-        $colors: #f64747, #22a7f0, #f9690e, #9b59b6, #03c9a9, #66182a, #184b52, #9e734a, #4e0258;
-        @for $i from 1 through length($colors) {
-            &:nth-child(#{$i}) {
-                background: nth($colors, $i);
-            }
-        }
+        // $colors: #f64747, #22a7f0, #f9690e, #9b59b6, #03c9a9, #66182a, #184b52, #9e734a, #4e0258;
+        // @for $i from 1 through length($colors) {
+        //     &:nth-child(#{$i}) {
+        //         background: nth($colors, $i);
+        //     }
+        // }
     }
     &s {
         width: percentage($panelcount);
@@ -299,6 +300,76 @@ $panelcount: 9; // set # of panels/sections here
         font-size: 30px;
         color: #fff;
     }
+
+    &:nth-child(1) {
+        background:url(../images/2014.png) center no-repeat;
+        background-size: contain;
+    }
+    &:nth-child(2) {
+        background:url(../images/2015.png) center no-repeat;
+        background-size: contain;
+    }
+    &:nth-child(3) {
+        background:url(../images/2016.png) center no-repeat;
+        background-size: contain;
+    }
+    &:nth-child(4) {
+        background:url(../images/2017.png) center no-repeat;
+        background-size: contain;
+    }
+    &:nth-child(5) {
+        background:url(../images/2018.png) center no-repeat;
+        background-size: contain;
+    }
+    &:nth-child(6) {
+        background:url(../images/2019.png) center no-repeat;
+        background-size: contain;
+    }
+    &:nth-child(7) {
+        background:url(../images/2020.png) center no-repeat;
+        background-size: contain;
+    }
+    &:nth-child(8) {
+        background:url(../images/2021.png) center no-repeat;
+        background-size: contain;
+        position: relative;
+        &:before {
+            position:absolute;
+            display: block;
+            content: "";
+            background:url(../images/2021-bg.png) no-repeat ;
+            background-size: contain;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+    &:nth-child(9) {
+        background:url(../images/2022.png) center no-repeat;
+        background-size: contain;
+        position: relative;
+        &:before {
+            position:absolute;
+            display: block;
+            content: "";
+            background:url(../images/2022-bg.png) no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+
+}
+.pattern1 {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    opacity: .15;
+    z-index: 2000;
+    mix-blend-mode: color-burn;
 }
 .navigation {
     position: fixed;
@@ -325,3 +396,4 @@ $panelcount: 9; // set # of panels/sections here
         }
     }
 }
+
