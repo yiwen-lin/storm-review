@@ -1,0 +1,327 @@
+@charset "UTF-8";
+@import "utils/variables", "utils/mixin";
+@import "normalize";
+@import "bootstrap/bootstrap-setting";
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+img {
+    display: block;
+}
+
+.clearfix,
+.clearfix::before,
+.clearfix::after {
+    display: table;
+    clear: both;
+}
+//font styles
+.serif {
+    font-family: "Noto Serif TC", "思源宋體 TC", "思源宋體 TW", "思源宋體", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    @include laptops {
+        font-weight: 500;
+    }
+}
+
+h1,
+.h1 {
+    font-size: 2.75rem; //44px
+
+    @include laptops {
+        font-size: 2.875rem; //46px
+    }
+}
+
+h2,
+.h2 {
+    font-size: 1.75rem; //28px
+
+    @include laptops {
+        font-size: 1.875rem; //30px
+    }
+}
+
+h3,
+.h3 {
+    font-size: 1.375rem; //22px
+
+    @include laptops {
+        font-size: 1.5rem; //24px
+    }
+}
+
+h4,
+.h4 {
+    font-size: 1.25rem; //20px
+
+    @include laptops {
+        font-size: 1.375rem; //22px
+    }
+}
+
+h5,
+.h5 {
+    font-size: 1.125rem; //18px
+
+    @include laptops {
+        font-size: 1.125rem; //18px
+    }
+}
+
+h6,
+.h6 {
+    font-size: 1rem; //16px
+    @include laptops {
+        font-size: 1rem; //16px
+    }
+}
+
+p {
+    font-size: 18px;
+}
+
+// list styles
+.upper-latin {
+    list-style-type: upper-alpha;
+}
+
+.decimal {
+    list-style-type: decimal;
+}
+
+.disc {
+    list-style-type: disc;
+}
+
+.number__brackets {
+    li {
+        position: relative;
+        padding-left: 2em;
+        line-height: 1.5;
+
+        span {
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+
+.list-reset {
+    @include list-reset;
+}
+
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mobile {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @include pad {
+        width: 95%;
+    }
+
+    @include desktop {
+        width: 1140px;
+    }
+}
+
+.row {
+    @include flex-obj(center, center);
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    @include mobile {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+
+.justify {
+    &-start {
+        justify-content: flex-start;
+    }
+    &-center {
+        justify-content: center;
+    }
+    &-end {
+        justify-content: flex-end;
+    }
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.align-center {
+    align-items: center;
+}
+
+a,
+button {
+    &.btn {
+        display: table;
+        border-width: 0;
+
+        &.btn--disabled {
+            color: #909090 !important;
+            background-color: #dddddd !important;
+            cursor: not-allowed !important;
+        }
+
+        &.btn--register {
+            color: $font-black;
+            background-color: $btn-register;
+            font-weight: 500;
+
+            &:hover {
+                background-color: $btn-register-hover;
+            }
+        }
+
+        &.btn--outlined {
+            color: #909090;
+            background-color: $white;
+            border: 1px solid #909090;
+
+            &:hover {
+                color: $main;
+                border-color: $main;
+            }
+        }
+
+        &.btn--100 {
+            width: 100%;
+        }
+
+        &.btn--standard {
+            padding: 8px 18px 10px;
+            font-size: 1rem;
+        }
+
+        &.btn--large {
+            padding: 10px 30px 12px;
+            font-size: 1rem;
+        }
+
+        &.btn--speaker {
+            color: $font-black;
+            background-color: $btn-register;
+            font-weight: 500;
+
+            &:hover {
+                background-color: $btn-register-hover;
+            }
+        }
+    }
+
+    .icon {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+// ---------- GENERAL STYLES ---------- //
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Fauna One", serif;
+}
+body,
+html {
+    height: 100%;
+}
+
+// ---------- SCROLLING STYLES ---------- //
+
+$panelcount: 9; // set # of panels/sections here
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    perspective: 1000;
+}
+
+.section {
+    & {
+        height: 100%;
+        width: calc(100% / #{$panelcount});
+        float: left;
+
+        // aesthetic only ----
+        position: relative;
+
+        $colors: #f64747, #22a7f0, #f9690e, #9b59b6, #03c9a9, #66182a, #184b52, #9e734a, #4e0258;
+        @for $i from 1 through length($colors) {
+            &:nth-child(#{$i}) {
+                background: nth($colors, $i);
+            }
+        }
+    }
+    &s {
+        width: percentage($panelcount);
+        height: 100%;
+    }
+    &__title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-size: 30px;
+        color: #fff;
+    }
+}
+.navigation {
+    position: fixed;
+    bottom: 2%;
+    left: 0;
+    padding: 0 10%;
+    width: 100%;
+    z-index: 9999;
+}
+
+.anchor-nav {
+    @include list-reset;
+    @include clearfix;
+
+    & > a {
+        float: left;
+        width: (100%/9);
+        text-align: center;
+        cursor: pointer;
+        color: #ccc;
+
+        &.active {
+            color: #000;
+        }
+    }
+}
