@@ -253,10 +253,3 @@
     }
 }
 /*End media queries*/
-
-/* 20220210修改 */
-#intro {
-    width: 100vw;
-    height: 100vh;
-    font-size: 72px;
-}

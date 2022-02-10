@@ -263,7 +263,7 @@ html {
 
 // ---------- SCROLLING STYLES ---------- //
 
-$panelcount: 10; // set # of panels/sections here
+$panelcount: 11; // set # of panels/sections here
 
 .wrapper {
     width: 100%;
@@ -271,7 +271,12 @@ $panelcount: 10; // set # of panels/sections here
     overflow: hidden;
     perspective: 1000;
 }
-
+.intro {
+    height: 100%;
+    width: calc(100% / #{$panelcount});
+    float: left;
+    position: relative;
+}
 .section {
     & {
         height: 100%;
@@ -329,7 +334,7 @@ $panelcount: 10; // set # of panels/sections here
         }
     }
 
-    &:nth-child(1) {
+    &:nth-child(2) {
         background:url(../images/2014.png) center 44px no-repeat;
         background-size: contain;
         position: relative;
@@ -351,7 +356,7 @@ $panelcount: 10; // set # of panels/sections here
             }
         }
     }
-    &:nth-child(2) {
+    &:nth-child(3) {
         background:url(../images/2015.png) center 30px no-repeat;
         background-size: contain;
 
@@ -362,7 +367,7 @@ $panelcount: 10; // set # of panels/sections here
             }
         }
     }
-    &:nth-child(3) {
+    &:nth-child(4) {
         background:url(../images/2016.png) center no-repeat;
         background-size: contain;
         background-position-y:0px;
@@ -373,7 +378,7 @@ $panelcount: 10; // set # of panels/sections here
             }
         }
     }
-    &:nth-child(4) {
+    &:nth-child(5) {
         background:url(../images/2017.png) center 44px no-repeat;
         background-size: contain;
         z-index: -2;
@@ -403,7 +408,7 @@ $panelcount: 10; // set # of panels/sections here
             padding: 0 30px;
         }
     }
-    &:nth-child(5) {
+    &:nth-child(6) {
         background:url(../images/2018.png) center no-repeat;
         background-size: contain;
         // background-position-y: 46px;
@@ -414,7 +419,7 @@ $panelcount: 10; // set # of panels/sections here
             }
         }
     }
-    &:nth-child(6) {
+    &:nth-child(7) {
         background:url(../images/2019.png) center no-repeat;
         background-size: cover;
         // background-position-y: -68px;
@@ -430,7 +435,7 @@ $panelcount: 10; // set # of panels/sections here
             }
         }
     }
-    &:nth-child(7) {
+    &:nth-child(8) {
         background:url(../images/2019-2.png) center no-repeat;
         background-size: contain;
         // background-position-y: 44px;
@@ -442,7 +447,7 @@ $panelcount: 10; // set # of panels/sections here
         }
     }
     
-    &:nth-child(8) {
+    &:nth-child(9) {
         background:url(../images/2020.png) center no-repeat;
         background-size: contain;
         // background-position-y: 44px;
@@ -453,7 +458,7 @@ $panelcount: 10; // set # of panels/sections here
             }
         }
     }
-    &:nth-child(9) {
+    &:nth-child(10) {
         background:url(../images/2021.png) center no-repeat;
         background-size: contain;
         position: relative;
@@ -469,7 +474,7 @@ $panelcount: 10; // set # of panels/sections here
             }
         }
     }
-    &:nth-child(10) {
+    &:nth-child(11) {
         background:url(../images/2022.png) center no-repeat;
         background-size: cover;
         position: relative;

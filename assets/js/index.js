@@ -26,10 +26,16 @@ $(function(){
 		.addTo(controller)
 		.on("update", function (e) {
 			var sceneAmount = 10,
-				sceneWidth= (e.endPos) / (sceneAmount-1),
+				sceneWidth= (e.endPos) / (sceneAmount),
 				currentPos=e.scrollPos;
 			var getScene = Math.round(currentPos/sceneWidth);
-			$('#anchor'+ getScene).addClass('active').siblings().removeClass('active')
+			if (getScene > 0) {
+				$('.navigation').fadeIn();
+				var anchorID = getScene - 1 ;
+				$('#anchor'+ anchorID).addClass('active').siblings().removeClass('active')
+			} else {
+				$('.navigation').fadeOut();
+			}
 		});
 	}
   
