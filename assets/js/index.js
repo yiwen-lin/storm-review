@@ -25,7 +25,7 @@ $(function(){
 		.setTween(actionHorizontal)
 		.addTo(controller)
 		.on("update", function (e) {
-			var sceneAmount = 9,
+			var sceneAmount = 10,
 				sceneWidth= (e.endPos) / (sceneAmount-1),
 				currentPos=e.scrollPos;
 			var getScene = Math.round(currentPos/sceneWidth);
