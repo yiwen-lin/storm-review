@@ -608,6 +608,7 @@ $panelcount: 11; // set # of panels/sections here
     mix-blend-mode: color-burn;
 }
 .navigation {
+    display: none;
     position: fixed;
     bottom: 0;
     left: 0;
