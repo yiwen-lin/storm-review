@@ -102,6 +102,12 @@ h6,
 
 p {
     font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 10px;
+    font-weight: 300;
+    &:nth-last-child(1) {
+        margin-bottom: 0;
+    }
 }
 
 // list styles
@@ -312,7 +318,7 @@ $panelcount: 11; // set # of panels/sections here
     .text-wrap{
         margin-top: 15%;
         .tag-txt {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 500;
             padding: 5px 12px 5px 13px;
             display: inline-block;
@@ -323,17 +329,16 @@ $panelcount: 11; // set # of panels/sections here
             }
         }
         h2 {
-            font-size: 44px;
+            font-size: 40px;
             font-weight: 200;
-            margin: 26px auto 14px;
+            margin: 12px auto 26px;
         }
         p {
-            font-size: 22px;
-            font-weight: 300;
-            line-height: 1.6;
+            
         }
     }
 
+    //2014
     &:nth-child(2) {
         background:url(../images/2014.png) center 44px no-repeat;
         background-size: contain;
@@ -341,13 +346,13 @@ $panelcount: 11; // set # of panels/sections here
         &:after {
             position:absolute;
             right: -7%;
-            bottom: 20px;
+            bottom: 58px;
             display: block;
             content: "";
-            background:url(../images/2014-2015.png) no-repeat;
+            background:url(../images/2014-2015.svg) no-repeat;
             background-size: contain;
-            width: 360px;
-            height: 670px;
+            width: 300px;
+            height: 520px;
             z-index: 1;
         }
         .text-wrap{
@@ -356,6 +361,7 @@ $panelcount: 11; // set # of panels/sections here
             }
         }
     }
+    //2015
     &:nth-child(3) {
         background:url(../images/2015.png) center 30px no-repeat;
         background-size: contain;
@@ -367,6 +373,7 @@ $panelcount: 11; // set # of panels/sections here
             }
         }
     }
+    //2016
     &:nth-child(4) {
         background:url(../images/2016.png) center no-repeat;
         background-size: contain;
@@ -378,29 +385,35 @@ $panelcount: 11; // set # of panels/sections here
             }
         }
     }
+    //2017
     &:nth-child(5) {
-        background:url(../images/2017.png) center 44px no-repeat;
+        background:url(../images/2017.svg) center 30px no-repeat;
         background-size: contain;
         z-index: -2;
         position: relative;
         // background-position-y: -68px;
         &:after {
             position:absolute;
-            left: -30%;
-            bottom: 45px;
+            left: -22%;
+            bottom: 58px;
             display: block;
             content: "";
-            background:url(../images/2016-2017.png) no-repeat;
+            background:url(../images/2016-2017.svg) no-repeat;
             background-size: contain;
-            width: 650px;
-            height: 300px;
+            width: 730px;
+            height: 246px;
             z-index: -1;
         }
 
         .text-wrap{
-            margin-top: 10%;
+            margin-top: 6%;
             .tag-txt {
                 background-color: #8ABA62;
+            }
+            h2 {
+                font-size: 26px;
+                margin-top: 18px;
+                margin-bottom: 20px;
             }
         }
         .award-wrap {
@@ -408,8 +421,9 @@ $panelcount: 11; // set # of panels/sections here
             padding: 0 30px;
         }
     }
+    //2018
     &:nth-child(6) {
-        background:url(../images/2018.png) center no-repeat;
+        background:url(../images/2018.png) center -30px no-repeat;
         background-size: contain;
         // background-position-y: 46px;
 
@@ -419,15 +433,16 @@ $panelcount: 11; // set # of panels/sections here
             }
         }
     }
+    //2019
     &:nth-child(7) {
         background:url(../images/2019.png) center no-repeat;
         background-size: cover;
         // background-position-y: -68px;
 
         .text-wrap{
-            margin-top: 35%;
-            background-color: rgba($color: #000000, $alpha: 0.5);
-            padding: 30px 28px;
+            margin-top: 15%;
+            background-color: rgba($color: #000000, $alpha: 0.65);
+            padding: 24px 22px 22px;
             color: #fff;
             .tag-txt {
                 background-color: #E5A232;
@@ -435,6 +450,7 @@ $panelcount: 11; // set # of panels/sections here
             }
         }
     }
+    //2019-2
     &:nth-child(8) {
         background:url(../images/2019-2.png) center no-repeat;
         background-size: contain;
@@ -446,7 +462,7 @@ $panelcount: 11; // set # of panels/sections here
             }
         }
     }
-    
+    //2020
     &:nth-child(9) {
         background:url(../images/2020.png) center no-repeat;
         background-size: contain;
@@ -458,6 +474,7 @@ $panelcount: 11; // set # of panels/sections here
             }
         }
     }
+    //2021
     &:nth-child(10) {
         background:url(../images/2021.png) center no-repeat;
         background-size: contain;
@@ -474,6 +491,7 @@ $panelcount: 11; // set # of panels/sections here
             }
         }
     }
+    //2022
     &:nth-child(11) {
         background:url(../images/2022.png) center no-repeat;
         background-size: cover;
@@ -504,10 +522,34 @@ $panelcount: 11; // set # of panels/sections here
             z-index: -1;
         }
 
+        .section2022 {
+            display:flex;
+            align-items:center;
+            height: calc(100vh - 0px);
+        }
         .text-wrap{
-            .tag-txt {
-                background-color: #3EAED4;
+            text-align: center;
+            margin-top: 0;
+            .year {
+                font-size:30px;
+                font-weight: 200;
+                letter-spacing: 2px;
+                font-family: 'roboto';
             }
+            .title {
+                width: 500px;
+                height: auto;
+                margin:0 auto 50px;
+            }
+            h2 {
+                margin-top: 20px;
+                font-size: 34px;
+            }
+            // .logo {
+            //     width: 150px;
+            //     margin:auto;
+            // }
+ 
         }
     }
 
@@ -528,7 +570,7 @@ $panelcount: 11; // set # of panels/sections here
     left: 0;
     // padding: 0 10%;
     width: 100%;
-    height: 70px;
+    height: 60px;
     z-index: 9999;
     background-color: #EFEEE6;
     border-top: 2px solid #444;
@@ -563,7 +605,83 @@ $panelcount: 11; // set # of panels/sections here
 
 
 //op 
-.op {
-    width: 100%;
+.section-op {
+    position: relative;
+    &::before {
+        position:absolute;
+        left:0 ;
+        bottom: 0;
+        display: block;
+        content: "";
+        background:url(../images/cloud.svg) no-repeat;
+        background-size: contain;
+        width: 770px;
+        height: 372px;
+        z-index: -1;
+    }
+    &:after {
+        position:absolute;
+        right: -15%;
+        top: 0;
+        display: block;
+        content: "";
+        background:url(../images/cloud2.svg) no-repeat;
+        background-size: contain;
+        width: 800px;
+        height: 324px;
+        z-index: -1;
+    }
+    .txt-wrap {
+        height: calc(100vh - 30px);
+        display:flex;
+        align-items:center;
+        text-align: center;
+        h5 {
+            font-family: roboto;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 500;
+            margin:0 auto 10px;
+            letter-spacing:2px
+        }
+        h3 {
+            font-family: roboto;
+            color: #fff;
+            font-size: 34px;
+            font-weight: 600;
+            margin:0 auto;
+            span {
+                font-size: 20px;
+                font-weight: 500;
+                margin-right: 10px;
+                margin-left: 3px;
+                vertical-align: super;
+            }
+        }
+        h1 {
+            font-size: 50px;
+            font-weight: 400;
+            margin: 20px auto 60px;
+            span {
+                color:#EDAB03;
+                font-family: roboto;
+                margin: 0 8px ;
+                font-size: 70px;
+                font-weight: 500;
+                vertical-align: text-bottom;
+            }
+        }
+        p {
+            text-align: left;
+            font-weight: 300;
+            font-size:16px;
+            color: #444;
+            margin-bottom: 30px;
+            &:nth-last-child(1) {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
+
 
