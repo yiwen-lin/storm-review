@@ -4996,9 +4996,6 @@ html {
   .section:nth-child(7) .text-wrap {
     margin-top: 90px;
   }
-  .section:nth-child(7) .text-wrap p {
-    display: inline;
-  }
 }
 
 .section:nth-child(8) .text-wrap .tag-txt {
