@@ -274,20 +274,23 @@ $panelcount: 11; // set # of panels/sections here
 .wrapper {
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    perspective: 1000;
+    overflow-y: hidden;
 }
 .intro {
-    height: 100%;
-    width: calc(100% / #{$panelcount});
-    float: left;
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 .section {
     & {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 100vw;
         height: 100%;
-        width: calc(100% / #{$panelcount});
-        float: left;
+        scroll-snap-align: start;
+        overflow: hidden;
+        z-index: 1;
 
         // aesthetic only ----
         position: relative;
@@ -300,8 +303,11 @@ $panelcount: 11; // set # of panels/sections here
         // }
     }
     &s {
-        width: percentage($panelcount);
+        display: flex;
         height: 100%;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
     }
     &__title {
         position: absolute;
@@ -313,6 +319,9 @@ $panelcount: 11; // set # of panels/sections here
         color: #fff;
     }
 
+    .container {
+        height: 100%;
+    }
 
     //text-wrap
     .text-wrap{
@@ -420,7 +429,6 @@ $panelcount: 11; // set # of panels/sections here
     &:nth-child(5) {
         background:url(../images/2017.svg) center 30px no-repeat;
         background-size: contain;
-        z-index: -2;
         position: relative;
         // background-position-y: -68px;
         &:after {
