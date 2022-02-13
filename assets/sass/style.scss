@@ -480,7 +480,7 @@ $panelcount: 11; // set # of panels/sections here
                 h2 {
                     font-size: 22px;
                     margin-top: 16px;
-                    margin-bottom: 12px;
+                    margin-bottom: 16px;
                 }
                 .award-wrap {
                     margin-top: 0px;
@@ -530,8 +530,16 @@ $panelcount: 11; // set # of panels/sections here
                 background-color: #E5A232;
                 color: #000;
             }
+            p {
+                color: #eee;
+            }
             @media only screen and (max-width: 767px) {
                 margin-top: 90px;
+                h2 {
+                    // font-size: 22px;
+                    // margin-top: 16px;
+                    // margin-bottom: 16px;
+                }
                 p {
                     display:inline;
                 }
@@ -576,6 +584,9 @@ $panelcount: 11; // set # of panels/sections here
             .tag-txt {
                 background-color: #87D8BF;
                 color: #000;
+            }
+            p {
+                color: #ccc;
             }
             @media only screen and (max-width: 767px) {
                 margin-top: 90px;

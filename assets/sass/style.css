@@ -4940,7 +4940,7 @@ html {
   .section:nth-child(5) .text-wrap h2 {
     font-size: 22px;
     margin-top: 16px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
   .section:nth-child(5) .text-wrap .award-wrap {
     margin-top: 0px;
@@ -4988,6 +4988,10 @@ html {
   color: #000;
 }
 
+.section:nth-child(7) .text-wrap p {
+  color: #eee;
+}
+
 @media only screen and (max-width: 767px) {
   .section:nth-child(7) .text-wrap {
     margin-top: 90px;
@@ -5025,6 +5029,10 @@ html {
 .section:nth-child(10) .text-wrap .tag-txt {
   background-color: #87D8BF;
   color: #000;
+}
+
+.section:nth-child(10) .text-wrap p {
+  color: #ccc;
 }
 
 @media only screen and (max-width: 767px) {
