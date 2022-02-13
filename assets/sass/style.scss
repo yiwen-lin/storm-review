@@ -575,7 +575,10 @@ $panelcount: 11; // set # of panels/sections here
         background-size: contain;
         position: relative;
         // background-position-y: 44px;
-
+        @media only screen and (max-width: 767px) {
+            background:url(../images/2021-mb.png) center -10px no-repeat;
+            background-size: contain;
+        }
         .text-wrap{
             margin-top: 15%;
             background-color: rgba($color: #000000, $alpha: 0.65);
@@ -590,6 +593,12 @@ $panelcount: 11; // set # of panels/sections here
             }
             @media only screen and (max-width: 767px) {
                 margin-top: 90px;
+                background-color: transparent;
+                padding: 0;
+                color: #444;
+                p {
+                    color: #444;
+                }
             }
         }
     }
@@ -598,7 +607,6 @@ $panelcount: 11; // set # of panels/sections here
         background:url(../images/2022.png) center no-repeat;
         background-size: cover;
         position: relative;
-        // background-position-y: 44px;
         &:before {
             position:absolute;
             left: 0;
@@ -623,11 +631,25 @@ $panelcount: 11; // set # of panels/sections here
             height: 733px;
             z-index: -1;
         }
+        @media only screen and (max-width: 767px) {
+            background:url(../images/2022-mb.png) center no-repeat;
+            background-size: cover;
+            &:before {
+                background:url(../images/2022-bg-mb.png) no-repeat;
+                background-size: cover;
+            }
+            &::after {
+                // width: 500px;
+                // height: 200px;
+                display:none;
+            }
+        }
 
         .section2022 {
             display:flex;
             align-items:center;
             height: calc(100vh - 0px);
+
         }
         .text-wrap{
             text-align: center;
@@ -648,6 +670,7 @@ $panelcount: 11; // set # of panels/sections here
                 font-size: 34px;
             }
             @media only screen and (max-width: 767px) {
+                margin-top: -15%;
                 .year {
                     font-size:26px;
                 }

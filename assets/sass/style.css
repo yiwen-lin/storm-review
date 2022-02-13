@@ -5019,6 +5019,13 @@ html {
   position: relative;
 }
 
+@media only screen and (max-width: 767px) {
+  .section:nth-child(10) {
+    background: url(../images/2021-mb.png) center -10px no-repeat;
+    background-size: contain;
+  }
+}
+
 .section:nth-child(10) .text-wrap {
   margin-top: 15%;
   background-color: rgba(0, 0, 0, 0.65);
@@ -5038,6 +5045,12 @@ html {
 @media only screen and (max-width: 767px) {
   .section:nth-child(10) .text-wrap {
     margin-top: 90px;
+    background-color: transparent;
+    padding: 0;
+    color: #444;
+  }
+  .section:nth-child(10) .text-wrap p {
+    color: #444;
   }
 }
 
@@ -5071,6 +5084,20 @@ html {
   width: 1500px;
   height: 733px;
   z-index: -1;
+}
+
+@media only screen and (max-width: 767px) {
+  .section:nth-child(11) {
+    background: url(../images/2022-mb.png) center no-repeat;
+    background-size: cover;
+  }
+  .section:nth-child(11):before {
+    background: url(../images/2022-bg-mb.png) no-repeat;
+    background-size: cover;
+  }
+  .section:nth-child(11)::after {
+    display: none;
+  }
 }
 
 .section:nth-child(11) .section2022 {
@@ -5107,6 +5134,9 @@ html {
 }
 
 @media only screen and (max-width: 767px) {
+  .section:nth-child(11) .text-wrap {
+    margin-top: -15%;
+  }
   .section:nth-child(11) .text-wrap .year {
     font-size: 26px;
   }
