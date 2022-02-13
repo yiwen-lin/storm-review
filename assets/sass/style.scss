@@ -520,7 +520,10 @@ $panelcount: 11; // set # of panels/sections here
         background:url(../images/2019.png) center no-repeat;
         background-size: cover;
         // background-position-y: -68px;
-
+        @media only screen and (max-width: 767px) {
+            background:url(../images/2019-mb.png) center  no-repeat;
+            background-size: cover;
+        }
         .text-wrap{
             margin-top: 15%;
             background-color: rgba($color: #000000, $alpha: 0.65);
@@ -535,13 +538,11 @@ $panelcount: 11; // set # of panels/sections here
             }
             @media only screen and (max-width: 767px) {
                 margin-top: 90px;
-                h2 {
-                    // font-size: 22px;
-                    // margin-top: 16px;
-                    // margin-bottom: 16px;
-                }
+                background-color: transparent;
+                padding: 0;
+                color: #444;
                 p {
-                    // display:inline;
+                    color: #444;
                 }
             }
         }

@@ -4976,6 +4976,13 @@ html {
   background-size: cover;
 }
 
+@media only screen and (max-width: 767px) {
+  .section:nth-child(7) {
+    background: url(../images/2019-mb.png) center no-repeat;
+    background-size: cover;
+  }
+}
+
 .section:nth-child(7) .text-wrap {
   margin-top: 15%;
   background-color: rgba(0, 0, 0, 0.65);
@@ -4995,6 +5002,12 @@ html {
 @media only screen and (max-width: 767px) {
   .section:nth-child(7) .text-wrap {
     margin-top: 90px;
+    background-color: transparent;
+    padding: 0;
+    color: #444;
+  }
+  .section:nth-child(7) .text-wrap p {
+    color: #444;
   }
 }
 
