@@ -4772,15 +4772,49 @@ html {
   margin: 12px auto 26px;
 }
 
+@media only screen and (max-width: 767px) {
+  .section .text-wrap {
+    margin-top: 90px;
+  }
+  .section .text-wrap .tag-txt {
+    font-size: 14px;
+    padding: 4px 10px 4px 11px;
+  }
+  .section .text-wrap h2 {
+    font-size: 30px;
+    font-weight: 200;
+    margin: 10px auto 20px;
+  }
+  .section .text-wrap p {
+    font-size: 15px;
+  }
+}
+
+.section .event-img {
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 767px) {
+  .section .event-img {
+    display: inherit;
+    height: auto;
+  }
+}
+
 .section:nth-child(2) {
-  background: url(../images/2014.png) center 44px no-repeat;
-  background-size: contain;
   position: relative;
 }
 
 .section:nth-child(2):after {
   position: absolute;
-  right: -7%;
+  right: -4%;
   bottom: 58px;
   display: block;
   content: "";
@@ -4791,27 +4825,27 @@ html {
   z-index: 1;
 }
 
+@media only screen and (max-width: 767px) {
+  .section:nth-child(2):after {
+    display: none;
+  }
+}
+
 .section:nth-child(2) .text-wrap .tag-txt {
   background-color: #FCD135;
 }
 
-.section:nth-child(3) {
-  background: url(../images/2015.png) center 30px no-repeat;
-  background-size: contain;
-}
-
 .section:nth-child(3) .text-wrap {
-  margin-top: 10%;
+  margin-top: 8%;
 }
 
 .section:nth-child(3) .text-wrap .tag-txt {
   background-color: #8EC1E1;
 }
 
-.section:nth-child(4) {
-  background: url(../images/2016.png) center no-repeat;
-  background-size: contain;
-  background-position-y: 0px;
+.section:nth-child(3) .event-img {
+  display: inherit;
+  height: auto;
 }
 
 .section:nth-child(4) .text-wrap .tag-txt {
@@ -4857,11 +4891,6 @@ html {
   padding: 0 30px;
 }
 
-.section:nth-child(6) {
-  background: url(../images/2018.png) center -30px no-repeat;
-  background-size: contain;
-}
-
 .section:nth-child(6) .text-wrap .tag-txt {
   background-color: #dbadc3;
 }
@@ -4883,22 +4912,16 @@ html {
   color: #000;
 }
 
-.section:nth-child(8) {
-  background: url(../images/2019-2.png) center no-repeat;
-  background-size: contain;
-}
-
 .section:nth-child(8) .text-wrap .tag-txt {
   background-color: #FCD135;
 }
 
-.section:nth-child(9) {
-  background: url(../images/2020.png) center no-repeat;
-  background-size: contain;
-}
-
 .section:nth-child(9) .text-wrap .tag-txt {
   background-color: #FCD135;
+}
+
+.section:nth-child(9) .event-img {
+  margin-top: 3%;
 }
 
 .section:nth-child(10) {
@@ -4983,6 +5006,19 @@ html {
   font-size: 34px;
 }
 
+@media only screen and (max-width: 767px) {
+  .section:nth-child(11) .text-wrap .year {
+    font-size: 26px;
+  }
+  .section:nth-child(11) .text-wrap .title {
+    width: 100%;
+    margin: 0 auto 30px;
+  }
+  .section:nth-child(11) .text-wrap h2 {
+    font-size: 28px;
+  }
+}
+
 .pattern1 {
   width: 100%;
   height: 100%;
@@ -5005,6 +5041,12 @@ html {
   border-top: 2px solid #444;
 }
 
+@media only screen and (max-width: 767px) {
+  .navigation {
+    height: 44px;
+  }
+}
+
 .anchor-nav {
   margin: 0;
   padding: 0;
@@ -5021,9 +5063,15 @@ html {
   clear: both;
 }
 
+@media only screen and (max-width: 767px) {
+  .anchor-nav {
+    margin-top: 10px;
+  }
+}
+
 .anchor-nav > a {
   float: left;
-  width: 10%;
+  width: 11.11111%;
   text-align: center;
   font-family: roboto;
   font-size: 16px;
@@ -5044,6 +5092,22 @@ html {
   color: #000;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+@media only screen and (max-width: 767px) {
+  .anchor-nav > a span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .anchor-nav > a {
+    font-size: 14px;
+    width: 10%;
+  }
+  .anchor-nav > a:nth-child(1) {
+    width: 20%;
+  }
 }
 
 .section-op {
@@ -5137,5 +5201,26 @@ html {
 
 .section-op .txt-wrap p:nth-last-child(1) {
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .section-op .txt-wrap h5 {
+    font-size: 18px;
+    margin: 0 auto 4px;
+  }
+  .section-op .txt-wrap h3 {
+    font-size: 24px;
+  }
+  .section-op .txt-wrap h1 {
+    font-size: 40px;
+    margin: 8px auto 30px;
+  }
+  .section-op .txt-wrap p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .section-op .txt-wrap p:nth-last-child(1) {
+    margin-bottom: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
