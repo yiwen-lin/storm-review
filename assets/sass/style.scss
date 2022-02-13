@@ -312,11 +312,14 @@ $panelcount: 11; // set # of panels/sections here
         font-size: 30px;
         color: #fff;
     }
-
+    @media only screen and (max-width: 767px) {
+        position: relative;
+        height: 100%;
+    }
 
     //text-wrap
     .text-wrap{
-        margin-top: 15%;
+        margin-top: -15%;
         .tag-txt {
             font-size: 15px;
             font-weight: 500;
@@ -334,7 +337,7 @@ $panelcount: 11; // set # of panels/sections here
             margin: 12px auto 26px;
         }
         p {
-            
+            color: #444;
         }
         @media only screen and (max-width: 767px) {
             margin-top: 90px;
@@ -361,6 +364,8 @@ $panelcount: 11; // set # of panels/sections here
         @media only screen and (max-width: 767px) {
             display: inherit;
             height: auto;
+            position: absolute;
+            bottom: 40px;
         }
     }
 
@@ -395,14 +400,27 @@ $panelcount: 11; // set # of panels/sections here
         // background:url(../images/2015.png) center 30px no-repeat;
         // background-size: contain;
         .text-wrap{
-            margin-top: 8%;
+            margin-top: 10%;
             .tag-txt {
                 background-color: #8EC1E1;
+            }
+            @media only screen and (max-width: 767px) {
+                margin-top: 90px;
             }
         }
         .event-img {
             display: inherit;
             height: auto;
+            margin-top: 7%;
+            @media only screen and (max-width: 767px) {
+                margin-top: auto;
+                padding: 0;
+                bottom: 100px;
+                img {
+                    width: 100%;
+                    margin-left: -20px;
+                }
+            }
         }
     }
     //2016
@@ -415,11 +433,16 @@ $panelcount: 11; // set # of panels/sections here
                 background-color: #E5A232;
             }
         }
+        @media only screen and (max-width: 767px) {
+            .event-img {
+                bottom: 60px;
+            }
+        }
     }
     //2017
     &:nth-child(5) {
-        background:url(../images/2017.svg) center 30px no-repeat;
-        background-size: contain;
+        // background:url(../images/2017.svg) center 30px no-repeat;
+        // background-size: contain;
         z-index: -2;
         position: relative;
         // background-position-y: -68px;
@@ -434,9 +457,11 @@ $panelcount: 11; // set # of panels/sections here
             width: 730px;
             height: 246px;
             z-index: -1;
+            @media only screen and (max-width: 767px) {
+                display:none;
+            }
         }
-
-        .text-wrap{
+        .text-wrap {
             margin-top: 6%;
             .tag-txt {
                 background-color: #8ABA62;
@@ -446,10 +471,38 @@ $panelcount: 11; // set # of panels/sections here
                 margin-top: 18px;
                 margin-bottom: 20px;
             }
+            .award-wrap {
+                margin-top: 20px;
+                width: 180px;
+            }
+            @media only screen and (max-width: 767px) {
+                margin-top: 90px;
+                h2 {
+                    font-size: 22px;
+                    margin-top: 16px;
+                    margin-bottom: 12px;
+                }
+                .award-wrap {
+                    margin-top: 0px;
+                    width: 150px;
+                }
+            }
         }
-        .award-wrap {
-            margin-top: 14%;
-            padding: 0 30px;
+
+        .event-img {
+            display: inherit;
+            height: auto;
+            margin-top: -20%;
+            z-index: -2;
+            @media only screen and (max-width: 767px) {
+                margin-top: auto;
+                padding: 0;
+                bottom: 30px;
+                img {
+                    width: 130%;
+                    margin-left: -20px;
+                }
+            }
         }
     }
     //2018
@@ -476,6 +529,12 @@ $panelcount: 11; // set # of panels/sections here
             .tag-txt {
                 background-color: #E5A232;
                 color: #000;
+            }
+            @media only screen and (max-width: 767px) {
+                margin-top: 90px;
+                p {
+                    display:inline;
+                }
             }
         }
     }
@@ -510,12 +569,16 @@ $panelcount: 11; // set # of panels/sections here
         // background-position-y: 44px;
 
         .text-wrap{
-            background-color: rgba($color: #000000, $alpha: 0.5);
+            margin-top: 15%;
+            background-color: rgba($color: #000000, $alpha: 0.65);
             padding: 30px 28px;
             color: #fff;
             .tag-txt {
                 background-color: #87D8BF;
                 color: #000;
+            }
+            @media only screen and (max-width: 767px) {
+                margin-top: 90px;
             }
         }
     }
@@ -683,6 +746,17 @@ $panelcount: 11; // set # of panels/sections here
         height: 324px;
         z-index: -1;
     }
+    @media only screen and (max-width: 767px) {
+        &::before {
+            width: 350px;
+            height: 160px;
+        }
+        &:after {
+            width: 400px;
+            height: 130px;
+        }
+    }
+
     .txt-wrap {
         height: calc(100vh - 30px);
         display:flex;
@@ -727,7 +801,6 @@ $panelcount: 11; // set # of panels/sections here
             text-align: left;
             font-weight: 300;
             font-size:16px;
-            color: #444;
             margin-bottom: 30px;
             &:nth-last-child(1) {
                 margin-bottom: 0;
@@ -744,6 +817,9 @@ $panelcount: 11; // set # of panels/sections here
            h1 {
             font-size: 40px;
             margin: 8px auto 30px;
+            span {
+                vertical-align: sub;
+            }
            }
            p {
                font-size: 15px;

@@ -4749,8 +4749,15 @@ html {
   color: #fff;
 }
 
+@media only screen and (max-width: 767px) {
+  .section {
+    position: relative;
+    height: 100%;
+  }
+}
+
 .section .text-wrap {
-  margin-top: 15%;
+  margin-top: -15%;
 }
 
 .section .text-wrap .tag-txt {
@@ -4770,6 +4777,10 @@ html {
   font-size: 40px;
   font-weight: 200;
   margin: 12px auto 26px;
+}
+
+.section .text-wrap p {
+  color: #444;
 }
 
 @media only screen and (max-width: 767px) {
@@ -4805,6 +4816,8 @@ html {
   .section .event-img {
     display: inherit;
     height: auto;
+    position: absolute;
+    bottom: 40px;
   }
 }
 
@@ -4836,25 +4849,48 @@ html {
 }
 
 .section:nth-child(3) .text-wrap {
-  margin-top: 8%;
+  margin-top: 10%;
 }
 
 .section:nth-child(3) .text-wrap .tag-txt {
   background-color: #8EC1E1;
 }
 
+@media only screen and (max-width: 767px) {
+  .section:nth-child(3) .text-wrap {
+    margin-top: 90px;
+  }
+}
+
 .section:nth-child(3) .event-img {
   display: inherit;
   height: auto;
+  margin-top: 7%;
+}
+
+@media only screen and (max-width: 767px) {
+  .section:nth-child(3) .event-img {
+    margin-top: auto;
+    padding: 0;
+    bottom: 100px;
+  }
+  .section:nth-child(3) .event-img img {
+    width: 100%;
+    margin-left: -20px;
+  }
 }
 
 .section:nth-child(4) .text-wrap .tag-txt {
   background-color: #E5A232;
 }
 
+@media only screen and (max-width: 767px) {
+  .section:nth-child(4) .event-img {
+    bottom: 60px;
+  }
+}
+
 .section:nth-child(5) {
-  background: url(../images/2017.svg) center 30px no-repeat;
-  background-size: contain;
   z-index: -2;
   position: relative;
 }
@@ -4872,6 +4908,12 @@ html {
   z-index: -1;
 }
 
+@media only screen and (max-width: 767px) {
+  .section:nth-child(5):after {
+    display: none;
+  }
+}
+
 .section:nth-child(5) .text-wrap {
   margin-top: 6%;
 }
@@ -4886,9 +4928,43 @@ html {
   margin-bottom: 20px;
 }
 
-.section:nth-child(5) .award-wrap {
-  margin-top: 14%;
-  padding: 0 30px;
+.section:nth-child(5) .text-wrap .award-wrap {
+  margin-top: 20px;
+  width: 180px;
+}
+
+@media only screen and (max-width: 767px) {
+  .section:nth-child(5) .text-wrap {
+    margin-top: 90px;
+  }
+  .section:nth-child(5) .text-wrap h2 {
+    font-size: 22px;
+    margin-top: 16px;
+    margin-bottom: 12px;
+  }
+  .section:nth-child(5) .text-wrap .award-wrap {
+    margin-top: 0px;
+    width: 150px;
+  }
+}
+
+.section:nth-child(5) .event-img {
+  display: inherit;
+  height: auto;
+  margin-top: -20%;
+  z-index: -2;
+}
+
+@media only screen and (max-width: 767px) {
+  .section:nth-child(5) .event-img {
+    margin-top: auto;
+    padding: 0;
+    bottom: 30px;
+  }
+  .section:nth-child(5) .event-img img {
+    width: 130%;
+    margin-left: -20px;
+  }
 }
 
 .section:nth-child(6) .text-wrap .tag-txt {
@@ -4912,6 +4988,15 @@ html {
   color: #000;
 }
 
+@media only screen and (max-width: 767px) {
+  .section:nth-child(7) .text-wrap {
+    margin-top: 90px;
+  }
+  .section:nth-child(7) .text-wrap p {
+    display: inline;
+  }
+}
+
 .section:nth-child(8) .text-wrap .tag-txt {
   background-color: #FCD135;
 }
@@ -4931,7 +5016,8 @@ html {
 }
 
 .section:nth-child(10) .text-wrap {
-  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 15%;
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 30px 28px;
   color: #fff;
 }
@@ -4939,6 +5025,12 @@ html {
 .section:nth-child(10) .text-wrap .tag-txt {
   background-color: #87D8BF;
   color: #000;
+}
+
+@media only screen and (max-width: 767px) {
+  .section:nth-child(10) .text-wrap {
+    margin-top: 90px;
+  }
 }
 
 .section:nth-child(11) {
@@ -5140,6 +5232,17 @@ html {
   z-index: -1;
 }
 
+@media only screen and (max-width: 767px) {
+  .section-op::before {
+    width: 350px;
+    height: 160px;
+  }
+  .section-op:after {
+    width: 400px;
+    height: 130px;
+  }
+}
+
 .section-op .txt-wrap {
   height: calc(100vh - 30px);
   display: -webkit-box;
@@ -5195,7 +5298,6 @@ html {
   text-align: left;
   font-weight: 300;
   font-size: 16px;
-  color: #444;
   margin-bottom: 30px;
 }
 
@@ -5214,6 +5316,9 @@ html {
   .section-op .txt-wrap h1 {
     font-size: 40px;
     margin: 8px auto 30px;
+  }
+  .section-op .txt-wrap h1 span {
+    vertical-align: sub;
   }
   .section-op .txt-wrap p {
     font-size: 15px;
