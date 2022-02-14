@@ -4710,12 +4710,13 @@ button .icon {
 body,
 html {
   height: 100%;
+  overflow: hidden;
 }
 
 .wrapper {
   width: 100%;
   height: 100%;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .intro {
@@ -4734,9 +4735,8 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-width: 100vw;
+  width: calc(100% / 11);
   height: 100%;
-  scroll-snap-align: start;
   overflow: hidden;
   z-index: 1;
   position: relative;
@@ -4746,11 +4746,8 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 1100%;
   height: 100%;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
 }
 
 .section__title {
@@ -5104,6 +5101,16 @@ html {
 .anchor-nav > a.active {
   color: #000;
   font-weight: 500;
+}
+
+.anchor-nav > a.anchor-nav-item-6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .anchor-nav > a:hover {
