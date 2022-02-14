@@ -4785,7 +4785,7 @@ html {
 
 @media only screen and (max-width: 767px) {
   .section .text-wrap {
-    margin-top: 90px;
+    margin-top: 100px;
   }
   .section .text-wrap .tag-txt {
     font-size: 14px;
@@ -4809,7 +4809,10 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+}
+
+.section .event-img img {
+  width: 100%;
 }
 
 @media only screen and (max-width: 767px) {
@@ -4858,7 +4861,7 @@ html {
 
 @media only screen and (max-width: 767px) {
   .section:nth-child(3) .text-wrap {
-    margin-top: 90px;
+    margin-top: 100px;
   }
 }
 
@@ -4935,7 +4938,7 @@ html {
 
 @media only screen and (max-width: 767px) {
   .section:nth-child(5) .text-wrap {
-    margin-top: 90px;
+    margin-top: 100px;
   }
   .section:nth-child(5) .text-wrap h2 {
     font-size: 22px;
@@ -5001,7 +5004,7 @@ html {
 
 @media only screen and (max-width: 767px) {
   .section:nth-child(7) .text-wrap {
-    margin-top: 90px;
+    margin-top: 100px;
     background-color: transparent;
     padding: 0;
     color: #444;
@@ -5054,7 +5057,7 @@ html {
 
 @media only screen and (max-width: 767px) {
   .section:nth-child(10) .text-wrap {
-    margin-top: 90px;
+    margin-top: 100px;
     background-color: transparent;
     padding: 0;
     color: #444;
