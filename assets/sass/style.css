@@ -4575,23 +4575,25 @@ p:nth-last-child(1) {
   }
 }
 
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
+@media only screen and (min-width: 768px) {
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 768px) and (min-width: 320px) {
   .row {
     margin-left: -20px;
     margin-right: -20px;
@@ -4702,6 +4704,20 @@ button .icon {
   vertical-align: middle;
 }
 
+header .nav-a a {
+  color: #333;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+@media only screen and (max-width: 767px) {
+  header .text-right {
+    position: absolute;
+    top: 14px;
+    right: 4px;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -4749,6 +4765,11 @@ html {
   color: #fff;
 }
 
+.section .container, .section .row {
+  height: 100%;
+  position: relative;
+}
+
 @media only screen and (max-width: 767px) {
   .section {
     position: relative;
@@ -4785,7 +4806,7 @@ html {
 
 @media only screen and (max-width: 767px) {
   .section .text-wrap {
-    margin-top: 100px;
+    margin-top: 25%;
   }
   .section .text-wrap .tag-txt {
     font-size: 14px;
@@ -4797,7 +4818,7 @@ html {
     margin: 10px auto 20px;
   }
   .section .text-wrap p {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 
@@ -4817,10 +4838,9 @@ html {
 
 @media only screen and (max-width: 767px) {
   .section .event-img {
-    display: inherit;
-    height: auto;
+    display: block;
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
   }
 }
 
@@ -4861,7 +4881,7 @@ html {
 
 @media only screen and (max-width: 767px) {
   .section:nth-child(3) .text-wrap {
-    margin-top: 100px;
+    margin-top: 25%;
   }
 }
 
@@ -4873,13 +4893,12 @@ html {
 
 @media only screen and (max-width: 767px) {
   .section:nth-child(3) .event-img {
-    margin-top: auto;
+    margin-top: 0;
     padding: 0;
-    bottom: 100px;
+    bottom: 90px;
   }
   .section:nth-child(3) .event-img img {
     width: 100%;
-    margin-left: -20px;
   }
 }
 
@@ -4890,6 +4909,7 @@ html {
 @media only screen and (max-width: 767px) {
   .section:nth-child(4) .event-img {
     bottom: 60px;
+    padding: 0 30px;
   }
 }
 
@@ -4938,7 +4958,7 @@ html {
 
 @media only screen and (max-width: 767px) {
   .section:nth-child(5) .text-wrap {
-    margin-top: 100px;
+    margin-top: 25%;
   }
   .section:nth-child(5) .text-wrap h2 {
     font-size: 22px;
@@ -4962,11 +4982,6 @@ html {
   .section:nth-child(5) .event-img {
     margin-top: auto;
     padding: 0;
-    bottom: 30px;
-  }
-  .section:nth-child(5) .event-img img {
-    width: 130%;
-    margin-left: -20px;
   }
 }
 
@@ -4987,7 +5002,7 @@ html {
 }
 
 .section:nth-child(7) .text-wrap {
-  margin-top: 15%;
+  margin-top: 25%;
   background-color: rgba(0, 0, 0, 0.65);
   padding: 24px 22px 22px;
   color: #fff;
@@ -5004,7 +5019,7 @@ html {
 
 @media only screen and (max-width: 767px) {
   .section:nth-child(7) .text-wrap {
-    margin-top: 100px;
+    margin-top: 25%;
     background-color: transparent;
     padding: 0;
     color: #444;
@@ -5022,10 +5037,6 @@ html {
   background-color: #FCD135;
 }
 
-.section:nth-child(9) .event-img {
-  margin-top: 3%;
-}
-
 .section:nth-child(10) {
   background: url(../images/2021.png) center no-repeat;
   background-size: contain;
@@ -5040,7 +5051,7 @@ html {
 }
 
 .section:nth-child(10) .text-wrap {
-  margin-top: 15%;
+  margin-top: 25%;
   background-color: rgba(0, 0, 0, 0.65);
   padding: 30px 28px;
   color: #fff;
@@ -5057,7 +5068,7 @@ html {
 
 @media only screen and (max-width: 767px) {
   .section:nth-child(10) .text-wrap {
-    margin-top: 100px;
+    margin-top: 25%;
     background-color: transparent;
     padding: 0;
     color: #444;
