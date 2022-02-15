@@ -295,7 +295,9 @@ header {
 body,
 html {
     height: 100%;
-    overflow: hidden;
+    &.mobile {
+        overflow: hidden;
+    }
 }
 
 // ---------- SCROLLING STYLES ---------- //
@@ -318,9 +320,14 @@ $panelcount: 11; // set # of panels/sections here
 
 .section {
     & {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        body:not(.mobile) & {
+            float: left;
+        }
+        .mobile & {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         width: calc(100% / #{$panelcount});
         height: 100%;
         // overflow: hidden;
@@ -338,9 +345,11 @@ $panelcount: 11; // set # of panels/sections here
     }
 
     &s {
-        display: flex;
         width: percentage($panelcount);
         height: 100%;
+        .mobile & {
+            display: flex;
+        }
     }
 
     &__title {
