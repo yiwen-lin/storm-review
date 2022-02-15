@@ -285,6 +285,7 @@ header {
 body,
 html {
     height: 100%;
+    overflow: hidden;
 }
 
 // ---------- SCROLLING STYLES ---------- //
@@ -296,18 +297,22 @@ $panelcount: 11; // set # of panels/sections here
     height: 100%;
     // overflow: hidden;
     perspective: 1000;
+    overflow: hidden;
 }
 .intro {
-    height: 100%;
-    width: calc(100% / #{$panelcount});
-    float: left;
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 .section {
     & {
-        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: calc(100% / #{$panelcount});
-        float: left;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
 
         // aesthetic only ----
         position: relative;
@@ -320,6 +325,7 @@ $panelcount: 11; // set # of panels/sections here
         // }
     }
     &s {
+        display: flex;
         width: percentage($panelcount);
         height: 100%;
     }
@@ -478,7 +484,7 @@ $panelcount: 11; // set # of panels/sections here
     &:nth-child(5) {
         // background:url(../images/2017.svg) center 30px no-repeat;
         // background-size: contain;
-        z-index: -2;
+        // z-index: -2;
         position: relative;
         // background-position-y: -68px;
         &:after {
@@ -733,6 +739,7 @@ $panelcount: 11; // set # of panels/sections here
     mix-blend-mode: color-burn;
 }
 .navigation {
+    display: none;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -768,6 +775,15 @@ $panelcount: 11; // set # of panels/sections here
         &.active {
             color: #000;
             font-weight: 500;
+        }
+        &.anchor-nav-item-6 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            overflow: hidden;
         }
         &:hover {
             color: #000;
