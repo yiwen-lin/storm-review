@@ -311,7 +311,7 @@ $panelcount: 11; // set # of panels/sections here
         justify-content: center;
         width: calc(100% / #{$panelcount});
         height: 100%;
-        overflow: hidden;
+        // overflow: hidden;
         z-index: 1;
 
         // aesthetic only ----
@@ -364,7 +364,7 @@ $panelcount: 11; // set # of panels/sections here
         h2 {
             font-size: 40px;
             font-weight: 200;
-            margin: 12px auto 26px;
+            margin: 12px auto 22px;
         }
         p {
             color: #444;
@@ -380,7 +380,7 @@ $panelcount: 11; // set # of panels/sections here
             h2 {
                 font-size: 30px;
                 font-weight: 200;
-                margin: 20px auto 20px;
+                margin: 15px auto 20px;
             }
             p {
                 font-size: 17px;
@@ -440,7 +440,7 @@ $panelcount: 11; // set # of panels/sections here
         // background:url(../images/2015.png) center 30px no-repeat;
         // background-size: contain;
         .text-wrap{
-            margin-top: 10%;
+            margin-top: 5%;
             .tag-txt {
                 background-color: #8EC1E1;
             }
@@ -449,8 +449,8 @@ $panelcount: 11; // set # of panels/sections here
             }
         }
         .event-img {
-            display: inherit;
-            height: auto;
+            // display: inherit;
+            // height: auto;
             // margin-top: 7%;
             @media only screen and (max-width: 767px) {
                 margin-top: 0;
@@ -465,6 +465,7 @@ $panelcount: 11; // set # of panels/sections here
     }
     //2016
     &:nth-child(4) {
+        z-index: 2;
         // background:url(../images/2016.png) center no-repeat;
         // background-size: contain;
         // background-position-y:0px;
@@ -533,7 +534,7 @@ $panelcount: 11; // set # of panels/sections here
         .event-img {
             display: inherit;
             height: auto;
-            margin-top: -20%;
+            margin-top: -30%;
             z-index: -2;
             @media only screen and (max-width: 767px) {
                 margin-top: auto;
@@ -566,7 +567,7 @@ $panelcount: 11; // set # of panels/sections here
             background-size: cover;
         }
         .text-wrap{
-            margin-top: 30%;
+            margin-top: 26%;
             background-color: rgba($color: #000000, $alpha: 0.65);
             padding: 24px 22px 22px;
             color: #fff;
@@ -616,6 +617,7 @@ $panelcount: 11; // set # of panels/sections here
         background:url(../images/2021.png) center no-repeat;
         background-size: contain;
         position: relative;
+        z-index: 10;
         // background-position-y: 44px;
         @media only screen and (max-width: 767px) {
             background:url(../images/2021-mb.png) center -10px no-repeat;
@@ -649,37 +651,22 @@ $panelcount: 11; // set # of panels/sections here
         background:url(../images/2022.png) center no-repeat;
         background-size: cover;
         position: relative;
-        &:before {
-            position:absolute;
-            left: 0;
-            bottom: 0;
-            display: block;
-            content: "";
-            background:url(../images/2022-bg.png) no-repeat;
-            background-size: cover;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-        }
         &:after {
             position:absolute;
-            left: -30%;
+            left: -25%;
             bottom: 0;
             display: block;
             content: "";
-            background:url(../images/2021-2022.png) no-repeat;
+            background:url(../images/2021-2022.svg) no-repeat;
             background-size: contain;
-            width: 1500px;
-            height: 733px;
+            width: 1100px;
+            height: 538px;
             z-index: -1;
         }
         @media only screen and (max-width: 767px) {
             background:url(../images/2022-mb.png) center no-repeat;
             background-size: cover;
-            &:before {
-                background:url(../images/2022-bg-mb.png) no-repeat;
-                background-size: cover;
-            }
+
             &::after {
                 // width: 500px;
                 // height: 200px;

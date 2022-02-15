@@ -4755,7 +4755,6 @@ html {
           justify-content: center;
   width: calc(100% / 11);
   height: 100%;
-  overflow: hidden;
   z-index: 1;
   position: relative;
 }
@@ -4810,7 +4809,7 @@ html {
 .section .text-wrap h2 {
   font-size: 40px;
   font-weight: 200;
-  margin: 12px auto 26px;
+  margin: 12px auto 22px;
 }
 
 .section .text-wrap p {
@@ -4828,7 +4827,7 @@ html {
   .section .text-wrap h2 {
     font-size: 30px;
     font-weight: 200;
-    margin: 20px auto 20px;
+    margin: 15px auto 20px;
   }
   .section .text-wrap p {
     font-size: 17px;
@@ -4885,7 +4884,7 @@ html {
 }
 
 .section:nth-child(3) .text-wrap {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .section:nth-child(3) .text-wrap .tag-txt {
@@ -4898,11 +4897,6 @@ html {
   }
 }
 
-.section:nth-child(3) .event-img {
-  display: inherit;
-  height: auto;
-}
-
 @media only screen and (max-width: 767px) {
   .section:nth-child(3) .event-img {
     margin-top: 0;
@@ -4912,6 +4906,10 @@ html {
   .section:nth-child(3) .event-img img {
     width: 100%;
   }
+}
+
+.section:nth-child(4) {
+  z-index: 2;
 }
 
 .section:nth-child(4) .text-wrap .tag-txt {
@@ -4985,7 +4983,7 @@ html {
 .section:nth-child(5) .event-img {
   display: inherit;
   height: auto;
-  margin-top: -20%;
+  margin-top: -30%;
   z-index: -2;
 }
 
@@ -5013,7 +5011,7 @@ html {
 }
 
 .section:nth-child(7) .text-wrap {
-  margin-top: 30%;
+  margin-top: 26%;
   background-color: rgba(0, 0, 0, 0.65);
   padding: 24px 22px 22px;
   color: #fff;
@@ -5052,6 +5050,7 @@ html {
   background: url(../images/2021.png) center no-repeat;
   background-size: contain;
   position: relative;
+  z-index: 10;
 }
 
 @media only screen and (max-width: 767px) {
@@ -5095,39 +5094,22 @@ html {
   position: relative;
 }
 
-.section:nth-child(11):before {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  content: "";
-  background: url(../images/2022-bg.png) no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-}
-
 .section:nth-child(11):after {
   position: absolute;
-  left: -30%;
+  left: -25%;
   bottom: 0;
   display: block;
   content: "";
-  background: url(../images/2021-2022.png) no-repeat;
+  background: url(../images/2021-2022.svg) no-repeat;
   background-size: contain;
-  width: 1500px;
-  height: 733px;
+  width: 1100px;
+  height: 538px;
   z-index: -1;
 }
 
 @media only screen and (max-width: 767px) {
   .section:nth-child(11) {
     background: url(../images/2022-mb.png) center no-repeat;
-    background-size: cover;
-  }
-  .section:nth-child(11):before {
-    background: url(../images/2022-bg-mb.png) no-repeat;
     background-size: cover;
   }
   .section:nth-child(11)::after {
