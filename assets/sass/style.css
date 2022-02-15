@@ -4726,6 +4726,7 @@ header .nav-a a {
 body,
 html {
   height: 100%;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -4733,23 +4734,36 @@ html {
   height: 100%;
   -webkit-perspective: 1000;
           perspective: 1000;
+  overflow: hidden;
 }
 
 .intro {
-  height: 100%;
-  width: calc(100% / 11);
-  float: left;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .section {
-  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: calc(100% / 11);
-  float: left;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
   position: relative;
 }
 
 .sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 1100%;
   height: 100%;
 }
@@ -4912,7 +4926,6 @@ html {
 }
 
 .section:nth-child(5) {
-  z-index: -2;
   position: relative;
 }
 
@@ -5183,6 +5196,7 @@ html {
 }
 
 .navigation {
+  display: none;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -5238,6 +5252,16 @@ html {
 .anchor-nav > a.active {
   color: #000;
   font-weight: 500;
+}
+
+.anchor-nav > a.anchor-nav-item-6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .anchor-nav > a:hover {
