@@ -105,7 +105,7 @@ h6,
 }
 
 p {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.65;
     margin-bottom: 10px;
     font-weight: 300;
@@ -633,7 +633,7 @@ $panelcount: 11; // set # of panels/sections here
         }
 
         .text-wrap {
-            margin-top: 26%;
+            margin-top: 22%;
             background-color: rgba($color: #000000, $alpha: 0.65);
             padding: 24px 22px 22px;
             color: #fff;
@@ -939,10 +939,11 @@ $panelcount: 11; // set # of panels/sections here
     }
 
     .txt-wrap {
-        height: calc(100vh - 30px);
+        // height: 100vh ;
         display: flex;
         align-items: center;
         text-align: center;
+        margin-top: 3%;
 
         h5 {
             font-family: roboto;
@@ -972,7 +973,7 @@ $panelcount: 11; // set # of panels/sections here
         h1 {
             font-size: 50px;
             font-weight: 400;
-            margin: 20px auto 60px;
+            margin: 20px auto 50px;
 
             span {
                 color: #EDAB03;
@@ -1102,11 +1103,11 @@ $panelcount: 11; // set # of panels/sections here
             color: #edab03;
             font-family: roboto;
             letter-spacing: 2px;
-            margin-top: 10%;
+            margin-top: 5%;
             text-decoration: none;
             overflow: hidden;
             @media only screen and (max-width: 767px) { 
-                margin-top: 5%;
+                margin-top: 4%;
             }
 
             // The Mouse

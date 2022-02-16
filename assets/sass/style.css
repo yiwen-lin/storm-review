@@ -4509,7 +4509,7 @@ h6,
 }
 
 p {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.65;
   margin-bottom: 10px;
   font-weight: 300;
@@ -5026,7 +5026,7 @@ body:not(.mobile) .section {
 }
 
 .section:nth-child(7) .text-wrap {
-  margin-top: 26%;
+  margin-top: 22%;
   background-color: rgba(0, 0, 0, 0.65);
   padding: 24px 22px 22px;
   color: #fff;
@@ -5325,7 +5325,6 @@ body:not(.mobile) .section {
 }
 
 .section-op .txt-wrap {
-  height: calc(100vh - 30px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5333,6 +5332,7 @@ body:not(.mobile) .section {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  margin-top: 3%;
 }
 
 .section-op .txt-wrap h5 {
@@ -5363,7 +5363,7 @@ body:not(.mobile) .section {
 .section-op .txt-wrap h1 {
   font-size: 50px;
   font-weight: 400;
-  margin: 20px auto 60px;
+  margin: 20px auto 50px;
 }
 
 .section-op .txt-wrap h1 span {
@@ -5460,14 +5460,14 @@ body:not(.mobile) .section {
   color: #edab03;
   font-family: roboto;
   letter-spacing: 2px;
-  margin-top: 10%;
+  margin-top: 5%;
   text-decoration: none;
   overflow: hidden;
 }
 
 @media only screen and (max-width: 767px) {
   .section-op .txt-wrap .mouse-scroll {
-    margin-top: 5%;
+    margin-top: 4%;
   }
 }
 
