@@ -76,8 +76,12 @@ $(function () {
 							} else {
 								$("#anchor" + anchorID).addClass("active").siblings().removeClass("active");
 							}
+							$('.section [data-aos]').removeClass('aos-animate')
+							$(`#section-${anchorID} [data-aos]`).addClass('aos-animate')
 						} else {
 							$(".navigation").fadeOut();
+							$('.section [data-aos]').removeClass('aos-animate')
+							$('#section--1 [data-aos]').addClass('aos-animate')
 						}
 						// DC
 						if (Math.abs(scrollIng - currentPos) < 100) scrollIng = 0;
@@ -190,8 +194,12 @@ $(function () {
 			}, 500);
 			if ( sliderIndex > 0 ) {
 				$('.navigation').fadeIn();
+				$('.section [data-aos]').removeClass('aos-animate');
+				$(`#section-${sliderIndex-1} [data-aos]`).addClass('aos-animate')
 			} else {
 				$('.navigation').fadeOut();
+				$('.section [data-aos]').removeClass('aos-animate');
+				$('#section--1 [data-aos]').addClass('aos-animate')
 			}
 			if ( sliderIndex == 7 ) {
 				$('a.anchor-nav-item').removeClass('active').eq(5).addClass('active');
@@ -199,7 +207,9 @@ $(function () {
 				$('a.anchor-nav-item').removeClass('active').eq(sliderIndex-1).addClass('active');
 			}
 		}
-		
+
+		$('#section--1 [data-aos]').addClass('aos-animate')
+
 		if( isMobile.any() ) {
 			sliderSwipe();
 		} else {
