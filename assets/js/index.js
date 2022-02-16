@@ -206,6 +206,14 @@ $(function () {
 			} else {
 				$('a.anchor-nav-item').removeClass('active').eq(sliderIndex-1).addClass('active');
 			}
+
+			$('a.anchor-nav-item').click(function() {
+				let thisIndex = $(this).index();
+				sliderIndex = thisIndex;
+				$('.section [data-aos]').removeClass('aos-animate');
+				$(`#section-${thisIndex} [data-aos]`).addClass('aos-animate')
+				$(this).addClass("active").siblings().removeClass("active");
+			})
 		}
 
 		$('#section--1 [data-aos]').addClass('aos-animate')
