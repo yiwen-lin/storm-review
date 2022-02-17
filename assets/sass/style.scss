@@ -399,6 +399,20 @@ $panelcount: 11; // set # of panels/sections here
     @media only screen and (max-width: 767px) {
         position: relative;
         height: 100%;
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            content: "";
+            background: url(../images/dots.jpg) no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            mix-blend-mode: color-burn;
+            opacity: 0.25;
+        } 
     }
 
     //text-wrap
@@ -777,6 +791,7 @@ $panelcount: 11; // set # of panels/sections here
             z-index: -1;
         }
 
+
         @media only screen and (max-width: 767px) {
             background: url(../images/2022-mb.png) center no-repeat;
             background-size: cover;
@@ -785,6 +800,9 @@ $panelcount: 11; // set # of panels/sections here
                 // width: 500px;
                 // height: 200px;
                 display: none;
+            }
+            &::before {
+                display:none;
             }
         }
 
@@ -948,7 +966,7 @@ $panelcount: 11; // set # of panels/sections here
 .section-op {
     position: relative;
 
-    &::before {
+    &::after {
         position: absolute;
         left: 0;
         bottom: 0;
@@ -961,7 +979,7 @@ $panelcount: 11; // set # of panels/sections here
         z-index: -1;
     }
 
-    &:after {
+    &::before {
         position: absolute;
         right: -15%;
         top: 0;
@@ -975,12 +993,20 @@ $panelcount: 11; // set # of panels/sections here
     }
 
     @media only screen and (max-width: 767px) {
-        &::before {
+        &:after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            content: "";
+            background: url(../images/cloud.svg) no-repeat;
+            background-size: contain;
             width: 350px;
             height: 160px;
+            z-index: -1;
         }
 
-        &:after {
+        &:before {
             width: 400px;
             height: 130px;
         }

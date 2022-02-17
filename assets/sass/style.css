@@ -4833,6 +4833,20 @@ body:not(.mobile) .section {
     position: relative;
     height: 100%;
   }
+  .section:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    content: "";
+    background: url(../images/dots.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    mix-blend-mode: color-burn;
+    opacity: 0.25;
+  }
 }
 
 .section .text-wrap {
@@ -5162,6 +5176,9 @@ body:not(.mobile) .section {
   .section:nth-child(11)::after {
     display: none;
   }
+  .section:nth-child(11)::before {
+    display: none;
+  }
 }
 
 .section:nth-child(11) .section2022 {
@@ -5327,7 +5344,7 @@ body:not(.mobile) .section {
   position: relative;
 }
 
-.section-op::before {
+.section-op::after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -5340,7 +5357,7 @@ body:not(.mobile) .section {
   z-index: -1;
 }
 
-.section-op:after {
+.section-op::before {
   position: absolute;
   right: -15%;
   top: 0;
@@ -5354,11 +5371,19 @@ body:not(.mobile) .section {
 }
 
 @media only screen and (max-width: 767px) {
-  .section-op::before {
+  .section-op:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    content: "";
+    background: url(../images/cloud.svg) no-repeat;
+    background-size: contain;
     width: 350px;
     height: 160px;
+    z-index: -1;
   }
-  .section-op:after {
+  .section-op:before {
     width: 400px;
     height: 130px;
   }
