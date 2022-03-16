@@ -69,7 +69,11 @@ $(function () {
 
                         var anchorID = getScene;
                         $('#anchor'+ anchorID).addClass('active').siblings().removeClass('active');
+<<<<<<< HEAD
                         
+=======
+
+>>>>>>> 84e73ee330465846d098dd3a6fdda0592c7c7343
                         if (getScene >= 0) {
                             var anchorID = getScene;
                             $('.section [data-aos]').removeClass('aos-animate')
@@ -88,6 +92,7 @@ $(function () {
             }
 
             // DC clear click to pos
+<<<<<<< HEAD
             var result = 0;
             var isInProgress = false;
             document.addEventListener('wheel', function (e) {
@@ -115,6 +120,15 @@ $(function () {
                             isInProgress = false;
                         },1000);
                     }
+=======
+            document.addEventListener('wheel', function (e) {
+                if ($('.active').length > 0) {
+                    e.preventDefault();
+                    var num = $('.active').data('num');
+                    if (e.deltaY > 0) num += 1;
+                    else num -= 1;
+                    $('#anchor' + num).click();
+>>>>>>> 84e73ee330465846d098dd3a6fdda0592c7c7343
                 }
             }, { passive: false });
 
